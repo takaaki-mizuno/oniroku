@@ -1,0 +1,33 @@
+{
+  "projectName": "Sample",
+  "general" : {
+    "style": "tab"
+  },
+  "tabs" : [
+    {
+      "name": "article",
+      "view": "article_list",
+      "icon": "article"
+    },
+    {
+      "name": "about",
+      "view": "about",
+      "icon": "article"
+    }
+  ],
+  "views": {
+    "article_list" : {
+      "type": "list",
+      "model": "article"
+    },
+    "article_detail" : {
+      "type": "webview",
+      "model": "article",
+      "url": "url"
+    },
+    "about": {
+      "type": "webview",
+      "url": "http://yahoo.com/"
+    }
+  }
+}
