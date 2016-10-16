@@ -14,4 +14,6 @@ class Git:
         return "git@github.com:takaaki-mizuno/oniroku-template-tab.git"
 
     def clone_repo(self):
-        return Repo.clone_from(self.repos, os.path.join(self.directory, self.name), branch='master')
+        repo_directory = os.path.join(self.directory, self.name)
+        Repo.clone_from(self.repos, repo_directory, branch='master')
+        return repo_directory

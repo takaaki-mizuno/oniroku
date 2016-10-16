@@ -1,9 +1,8 @@
 #!/usr/bin/env python
 
+import os
 import click
 from oniroku import Oniroku
-import os
-
 
 @click.command(help='Oniroku')  # (1)
 @click.option('-n', '--name', 'name', type=str, help='project name', required=True)

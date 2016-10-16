@@ -19,6 +19,7 @@ Oniroku
 from oniroku.project import Project
 from oniroku.git import Git
 from oniroku.cocoapods import Cocoapods
+from oniroku.replacer import Replacer
 
 __version__ = '0.0.1'
 
@@ -33,6 +34,7 @@ class Oniroku:
 
     def execute(self):
         self.repo = Git(self).clone_repo()
+        Replacer(self).change_name()
         pod = Cocoapods(self)
         pod.pod_repo_update()
         pod.pod_install()
